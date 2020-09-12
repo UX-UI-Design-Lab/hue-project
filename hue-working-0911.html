@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+  <title>HUE: Humans in User Experience </title>
+  <meta charset="utf-8">
+    <meta description="HUE(Humans in User Experience) project aims to provide a co-creative process in UX design & research for humanities">
+    <meta keywords="user experience research, UCLA Digital Humanities, UX design"> 
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+ <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+    
+<style>
+    body{
+        font-family: 'Lato', sans-serif;
+    }
+    
+    #logo {
+        background-image: url(https://ux-ui-design-lab.github.io/hue-project/HUE-logo.png);
+        background-repeat: no-repeat;
+        background-size: 12em;
+        background-position: right;
+    }
+    
+    .title{
+        font-weight: 700;
+        font-size: 2.5em;
+        line-height: 1.5em;
+    }
+    .round-picture{
+        border-radius: 50%;
+        width: 10em;
+        height: 10em;
+        margin-left: 0em;
+        margin-top: 1em;
+        
+    }
+    
+    .sepia {
+        filter: sepia(60%);
+    }
+    
+    .grayscale {
+        filter: grayscale(100%);
+    }
+    
+    .grayBG {
+        background-color: #E9ECF5; 
+    }
+    
+    #contact {
+        /* background-color: #FDBF50;*/
+        background-color: hsla(25, 90%, 50%, 1);
+    }
+
+    #mail:hover {
+        color:yellow !important;
+    }
+    
+    .mybutton {
+        background-color: #F1554C;
+        border-color: #F1554C;
+        color: white;
+    }
+    
+    
+    #Rbutton {
+        background-color: #0D276B;
+    }
+    
+    #nav {
+        color:grey;
+    }
+    
+    #Wtext {
+        color: white;
+    }
+    
+    #Btext {
+        color: black;
+    }
+
+    
+.fa {
+  padding: 10px;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+
+}
+    
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+    
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+    
+h6 {
+        font-size: 1.8em;
+    }
+    
+</style>
+    
+<body>
+    
+ <ul class="nav justify-content-between align-middle pt-3 mr-3">
+    <a class="navbar-brand mr-auto mt-2 mt-lg-0 ml-4" href="#">
+    <img src="https://ux-ui-design-lab.github.io/hue-project/HUE-logo.png" alt="logo" style="width:40px;">
+    </a>
+     
+    <li class="nav-item">
+      <a class="nav-link text-secondary" href="#team" >Team</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-secondary" href="#projects" >Projects</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-secondary" href="#resources" >Resources</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-secondary" href="#contact" >Contact</a>
+    </li>
+     
+     <a href="#" class="btn bg-secondary text-white btn-md mt-0 mb-2" data-toggle="modal" data-target="#exampleModal"> Member Login </a>
+     
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">HUE member login</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="member-email" class="col-form-label">email:</label>
+            <input type="text" class="form-control" id="member-email">
+          </div>
+          <div class="form-group">
+            <label for="member-password" class="col-form-label">password:</label>
+             <input type="password" class="form-control"  id="member-email" name="pwd">
+           
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary"> login </button>
+      </div>
+    </div>
+  </div>
+</div>
+     
+</ul>
+    
+<div class="container" style="height: 50vh;"> 
+<div class="m-5 pt-10" id="logo">
+    
+  <small class="form-text text-muted"> Humans in User Experience </small><br>
+  <h1 class="title">
+      HUE is a UCLA-based <br> network aiming to bring <br> humans together in UX/UI</h1>
+    <br><br>
+    
+</div>
+ </div>
+
+
+<div class="bg-light" id="team" >
+<div class="container pt-5 pb-5"><br>
+  <h2 class="title">Our Team</h2>
+  <p>We are proud of our diverse backgrounds and unique experiences of our growing team. Connect with us on Linkedin and check out our personal portfolios to see what we've been up to.</p>
+
+    
+<p>
+  <a class="btn btn-warning text-dark" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Experts</a>
+  <a class="btn btn-dark text-warning" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2"> Advisors </a>
+    
+ <!-- a class="btn btn-danger text-white" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2"> View All </a -->
+</p>
+<div class="row">
+  <div class="col-md-12 m-2">
+    <div class="collapse show multi-collapse" id="multiCollapseExample1">
+        
+      <div class="card-deck">
+        <div class="card">
+            
+            <img class="card-img-top w-100 sepia" style="border-radius:50%; overflow:hidden; border: 2em solid white;" src="https://raw.githubusercontent.com/UX-UI-Design-Lab/hue-project/master/MarinaS-square2.jpg" alt="Card image cap">
+ 
+            <div class="card-body">
+                <h5 class="card-title">Marina Souliman</h5>
+                <p class="card-text">Marina has worked on a variety of UX projects where she honed her user research, wireframing and prototyping skills</p>
+                
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+            </div>
+            <div class="card-footer bg-warning">
+                <small class="text-dark">User research, Prototyping </small>
+            </div>
+        </div>
+        <div class="card">
+    <img class="card-img-top w-100 sepia" style="border-radius:50%; overflow:hidden; border: 2em solid white;" src="https://ux-ui-design-lab.github.io/hue-project/GabrielleKyraSumilang_Profile_square.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Gabrielle Kyra Sumilang</h5>
+      <p class="card-text">Psych grad working to create meaningful experiences through detailed design and empathy-driven problem solving.</p>
+        
+    </div>
+    <div class="card-footer bg-warning">
+      <small class="text-dark">Branding, UX writing </small>
+    </div>
+  </div>
+        <div class="card">
+    <img class="card-img-top w-100 sepia" style="border-radius:50%; overflow:hidden; border: 2em solid white;" src="https://ux-ui-design-lab.github.io/hue-project/PriyanaPatel_square.png" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Priyana Patel</h5>
+      <p class="card-text">Priyana is a recent graduate who enjoys applying human-centered design to produce innovative solutions</p>
+    </div>
+    <div class="card-footer bg-warning">
+      <small class="text-dark">User research, Prototyping </small>
+    </div>
+  </div>
+        <div class="card">
+    <img class="card-img-top w-100 sepia" style="border-radius:50%; overflow:hidden; border: 2em solid white;"  src="https://ux-ui-design-lab.github.io/hue-project/HUE-logo.png" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Grace Zhu</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+    </div>
+    <div class="card-footer bg-warning">
+      <small class="text-dark">User research, Prototyping</small>
+    </div>
+  </div>
+    </div>
+          
+    </div>
+  </div>
+
+  <div class="col-md-12 m-2">
+    <div class="collapse multi-collapse" id="multiCollapseExample2">
+      
+              <div class="card-deck">
+        <div class="card">
+            <img class="card-img-top" src="./sookie.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Sookie C.</h5>
+                <p class="card-text"> A design scienitst with expertise in psychology of design, experience design &amp; process modeling, and aesthetic judgement.<br><br> <a class="btn btn-secondary text-light" href="http://ancova.x10.mx/wp/about-me/" target="_blank"> Website </a></p>
+            </div>
+            <div class="card-footer bg-dark text-light">
+                <small class="text-light">UX design, Design Research, Visualization, Creative Coding </small>
+            </div>
+        </div>
+        <div class="card">
+    <img class="card-img-top grayscale" src="https://ux-ui-design-lab.github.io/hue-project/HUE-logo.png" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Justin G.</h5>
+      <p class="card-text"> &quot; My profession consists of replicating the objective and applying it to a digital format with everyone in mind. &quot; <br><br> <a class="btn btn-secondary text-light" href="http://www.justin-grant.com/#" target="_blank"> Website </a></p>
+    </div>
+    <div class="card-footer bg-dark text-warning">
+      <small class="text-light">Full Stack Web Development, Marketing, Project Management </small>
+    </div>
+  </div>
+        <div class="card">
+    <img class="card-img-top" src="./iris.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Iris C.</h5>
+      <p class="card-text"> With 20 years experience in designing with high technology for innovative solutions, an design expert with the holistic view on user experience. </p>
+        <a href="https://www.linkedin.com/in/iris-kyoung-sun-cho-4232031/" target="_blank" class="fa fa-linkedin"></a>
+    </div>
+    <div class="card-footer bg-dark text-warning">
+      <small class="text-light">UX design, Innovative Product Design Process, Marketing, Design Strategy</small>
+    </div>
+  </div>
+        <div class="card">
+    <img class="card-img-top" src="./vera.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Vera PL. </h5>
+      <p class="card-text"> A Graphic Designer &amp; Marketing Strategy Consultant. The objective of my work is to guide my clients to an effective and sustainable solution to their needs. I enjoy concept driven work.</p>
+    </div>
+    <div class="card-footer bg-dark text-warning">
+      <small class="text-light">Graphic/ Brand Identity/ Packaging Design, Freelancing Project Management </small>
+    </div>
+  </div>
+    </div>
+    </div>
+  </div>
+    
+
+    </div>
+
+
+    <!-- button type="button" class="btn btn-danger" id="button">View All Team Members</button -->
+
+    
+  </div> 
+</div>
+
+    
+  <!-- ul class="nav justify-content-center pb-4"> 
+    <li class="nav-item">
+      <a class="nav-link" href="#" id="Btext">Intern</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#" id="Btext">Expert</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#" id="Btext">Lead</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#" id="Btext">Advisor</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#" id="Btext">Partner</a>
+    </li>
+  </ul -->
+
+<br><br><br>
+    
+<div class="container" id="projects">
+  <h2 class="title" >Current Projects</h2>
+  <p>We are always thinking about how to solve new challenges for our partners.</p><br>
+  <div class="card-deck">
+      <div class="card h-50">
+        <img class="card-img-top" height="300px" src="https://hrs-v3-production.s3.amazonaws.com/AdobeStock_191965221.jpg" alt="human resource law ">
+        <div class="card-body">
+          <h6 class="card-title" >hrsimple</h6>
+          <p class="card-text"> We collaborate with hrsimple to improve user experience of the online publications related to the human-resource law and policies. </p>
+        </div>
+      </div>
+      <div class="card h-50">
+        <img class="card-img-top border-0" height="300px" src="https://upload.wikimedia.org/wikipedia/commons/b/b5/New_York_utility_lines_in_1890.jpg" alt="New York utility lines in 1890.jpg">
+        <div class="card-body">
+          <h6 class="card-title" >Technoculture online </h6>
+          <p class="card-text"> We are designing UC irvine Prof. Simon Penny's online course site "200 years of Technoculture: A cultural history of the Anthropcene" </p>
+        </div>
+      </div> 
+
+      <!-- https://images.unsplash.com/31/RpgvvtYAQeqAIs1knERU_vegetables.jpg?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1954&q=80 -->
+      
+      <div class="card h-50">
+        <img class="card-img-top pl-4 pr-4 pt-0 pb-0" src="./Chef_Farid_Logo.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h6 class="card-title" >Chef Farid</h6>
+          <p class="card-text"> We are planning to collaborate with Vera to design a noval user experience of catering service. <br><br> </p>
+        </div>
+      </div>
+      <!-- div class="card">
+        <img class="card-img-top" height="30%" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title" id="title">Professor Simon Penny</h5>
+          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+        </div-->
+      </div> 
+ 
+<br><br>
+    
+  <a href="https://forms.gle/XgQb4RtJfQjuMBCBA" target="_blank" class="btn mybutton" >Project Request</a> <br>
+<small class="form-text text-muted">We love to explore a new collaboration and partnership! </small>
+  </div>
+    
+<br><br><br>
+
+<div class="bg-light" id="resources"> 
+<div class="container pt-5 pb-5"><br>
+  <h2 class="title">Resources</h2>
+  <p>Discover more about UI/UX to help inform your career path</p><br>
+  <div class="card-columns">
+      <h4>Building Your Career</h4>
+      <div class="card bg-light">
+      <div class="card-body text-center">
+        <p class="card-text">Internships &amp; Jobs</p>
+      </div>
+    </div>
+    <div class="card bg-light">
+      <div class="card-body text-center">
+        <p class="card-text">Networking</p>
+      </div>
+    </div>
+  </div> <br><br>
+    
+  <div class="card-columns">
+    <h4>Learn the UX Process</h4><br><br>
+    <div class="card">
+      <div class="card-body text-center">
+        <p class="card-text">Ideation</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body text-center">
+        <p class="card-text">Design Process</p>
+      </div>
+    </div>  
+    <div class="card">
+      <div class="card-body text-center">
+        <p class="card-text">User Research</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body text-center">
+        <p class="card-text">UX Portfolio</p>
+      </div>
+    </div>
+  </div>
+    
+    
+</div><br>
+</div>
+
+    <br><br><br>
+        
+<div class="container bg-white" >
+  <h2 class="title"> Join the Team</h2>
+  <p> We're always looking for new members to join our network.</p> <br>
+  
+    <!-- iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe_BjfvuG9CsEPiDcDFi1hocGbUwpC7BraVe3I3bPfg__YW5w/viewform?embedded=true" width="640" height="1192" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe -->
+    
+
+    <a class="btn mybutton" href="https://forms.gle/nHxkJBtoqEWCYeFA7" target="_blank" class="btn btn-primary"> I'm interested in HUE! </a>
+    <br>
+    <small class="form-text text-muted"> Just drop some words about you and we will contact you back about how to start. </small>
+
+<br><br>
+
+</div>
+    
+<div id="contact">
+    <div class="container pt-5 pb-5">
+    <h2 class="text-white">Connect with us</h2>
+    <a id="mail" class="text-white" href="mailto:hello.hue.project@gmail.com?cc=sookie@g.ucla.edu&subject=Hello&body=what-you-want-to-say-to-HUE" target="_blank">hello.hue.project@gmail.com</a>
+        
+    </div>
+</div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
