@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>HUE: Humans in User Experience </title>
+  <meta charset="utf-8">
+    <meta description="HUE(Humans in User Experience) project aims to provide a co-creative process in UX design & research for humanities">
+    <meta keywords="user experience research, UCLA Digital Humanities, UX design">
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+ <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<style>
+    body{
+        font-family: 'Lato', sans-serif;
+    }
+
+    #logo {
+        background-image: url(https://ux-ui-design-lab.github.io/hue-project/HUE-logo.png);
+        background-repeat: no-repeat;
+        background-size: 12em;
+        background-position: right;
+    }
+
+    .title{
+        font-weight: 700;
+        font-size: 2.5em;
+        line-height: 1.5em;
+    }
+    .round-picture{
+        border-radius: 50%;
+        width: 10em;
+        height: 10em;
+        margin-left: 0em;
+        margin-top: 1em;
+
+    }
+
+    .sepia {
+        filter: sepia(60%);
+    }
+
+    .grayscale {
+        filter: grayscale(100%);
+    }
+
+    .grayBG {
+        background-color: #E9ECF5;
+    }
+
+    #contact {
+        /* background-color: #FDBF50;*/
+        background-color: hsla(25, 90%, 50%, 1);
+    }
+
+    #mail:hover {
+        text-decoration:none;
+        color:yellow !important;
+    }
+
+    #story {
+        color:saddlebrown !important;
+    }
+    #story:hover {
+        text-decoration:none;
+        color:yellow !important;
+    }
+
+    .mybutton {
+        background-color: #F1554C;
+        border-color: #F1554C;
+        color: white;
+    }
+
+
+    #Rbutton {
+        background-color: #0D276B;
+    }
+
+    #nav {
+        color:grey;
+    }
+
+    #Wtext {
+        color: white;
+    }
+
+    #Btext {
+        color: black;
+    }
+
+
+.fa {
+  padding: 10px;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+
+}
+
+.fa:hover {
+  opacity: 0.7;
+  background: #3B5998;
+  color: white;
+
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-linkedin {
+  /* background: #007bb5; */
+  background: #3B5998;
+  color: white;
+}
+
+.fa-envelope {
+  /* background: #ff6600; */
+    background: #3B5998;
+   /* background: gray; */
+  color: white;
+}
+
+.fa-link {
+  /* background: #dd4b39;*/
+    background: #3B5998;
+  /*  background: gray; */
+  color: white;
+}
+
+h6 {
+        font-size: 1.8em;
+    }
+
+#hue-intro {
+        width: 30vw;
+        font-size: 2em;
+    }
+@media only screen and (max-width: 576px), only screen and (max-device-width: 576px) {
+
+    #logo {
+        background-image: none;
+    }
+
+    #hue-intro {
+        width: 80vw;
+        font-size: 2em;
+    }
+    #login_BTN {
+        padding-bottom: 0;
+        height: 2.5em;
+    }
+}
+
+
+.card-deck {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: .5rem;
+}
+
+</style>
+
+<body>
+
+<nav class="navbar navbar-expand-md navbar-light bg-white pt-3 me-3">
+
+    <a class="navbar-brand me-auto mt-2 mt-lg-0 ms-4" href="#">
+    <img src="https://ux-ui-design-lab.github.io/hue-project/HUE-logo.png" alt="logo" style="width:40px;">
+    </a>
+
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+    <div class="collapse navbar-collapse " id="navbarNav">
+
+    <ul class="navbar-nav ms-auto">
+    <li class="nav-item">
+      <a class="nav-link text-secondary" href="#team" >Team &nbsp;&nbsp;</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-secondary" href="#projects" >Projects &nbsp;&nbsp;</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-secondary" href="#resources" >Resources &nbsp;&nbsp;</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-secondary" href="#contact" >Contact&nbsp;&nbsp;</a>
+    </li>
+
+     <a href="./login.php" id="login_BTN" class="btn bg-secondary text-white btn-md mt-0 mb-2 ms-3 me-2"> Login </a>
+
+    </ul>
+  </div>
+
+<!--div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">HUE member login</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+            <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
+                <label>Username</label>
+                <input type="text" name="username" class="form-control" value="<?php echo $username; ?>">
+                <span class="help-block"><?php echo $username_err; ?></span>
+            </div>
+            <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
+                <label>Password</label>
+                <input type="password" name="password" class="form-control">
+                <span class="help-block"><?php echo $password_err; ?></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Login">
+            </div>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div -->
+
+</nav>
+
+<div class="container" style="height: 50vh;">
+<!-- div class="m-5 pt-10" id="logo">
+
+  <small class="form-text text-muted"> Humans in User Experience </small><br>
+  <h1 class="title" id="hue-intro">
+      Welcome to HUE. <br> We're a UCLA-based network aiming to bring humans together in UX/UI Design.</h1>
+    <br><br>
+
+</div -->
+
+
+<div class="card mb-3 border-0" >
+  <div class="row gx-5">
+    <div class="col-md-6 p-3">
+      <div class="card-body">
+          <small class="form-text text-muted"> Humans in User Experience </small><br>
+        <h1 class="title" id="hue-intro">
+      Welcome to HUE. <br> We're a UCLA-based network aiming to bring humans together in UX/UI Design.</h1>
+    <br><br>
+      </div>
+    </div>
+    <div class="col-md-6 p-5">
+        <img class="img-fluid d-none d-md-block" style="margin-right: 30px;" src="https://ux-ui-design-lab.github.io/hue-project/HUE-logo.png" alt="">
+
+    </div>
+  </div>
+</div>
+ </div>
+
+<div class="bg-light" id="team" >
+<div class="container pt-5 pb-5"><br>
+  <h2 class="title">Our Team</h2>
+  <p>We are proud of the diverse backgrounds and unique experiences that make up our growing team. Connect with us on LinkedIn and check out our personal portfolios to see what we've been up to!</p>
+
+
+<!--p>
+  <a class="btn btn-warning text-dark" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Experts</a>
+  <a class="btn btn-dark text-warning" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2"> Advisors </a>
+
+ < a class="btn btn-danger text-white" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2"> View All </a
+</p -->
+<div class="row">
+  <div class="col-12 m-2">
+    <div class="collapse show multi-collapse" id="multiCollapseExample1">
+
+      <div class="card-deck">
+
+        <div class="card mb-3 border-5 border-start border-end-0 border-top-0 border-bottom-0 border-warning" >
+
+        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#MarinaModal">
+
+          <div class="row g-0 text-start">
+
+            <div class="col-md-4">
+              <img class="img-fluid sepia p-2 mt-2" style="border-radius:50%; overflow:hidden; " src="https://hue.humspace.ucla.edu/images/MarinaS.jpeg" alt="Marian Souliman Profile photo">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body m-1">
+                <h5 class="card-title mt-2">Marina Souliman</h5>
+                <!-- p class="card-text">Marina has worked on a variety of UX projects where she honed her user research, wireframing and prototyping skills.</p -->
+                 <small class="text-muted">User Research, Prototyping </small>
+              </div>
+
+            </div>
+
+          </div>
+
+        </button>
+
+        </div>
+
+
+        <div class="modal fade" id="MarinaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" >
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="MarinaModalLabel">Marina Souliman</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        Marina has worked on a variety of UX projects where she honed her user research, wireframing and prototyping skills.
+                      </div>
+                      <div class="modal-footer">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-linkedin"></a>
+                        <a href="#" class="fa fa-envelope"></a>
+                        <a href="#" class="fa fa-link"></a>
+
+                        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+        <div class="card mb-3  border-5 border-start border-end-0 border-top-0 border-bottom-0 border-warning" >
+        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#GabyModal">
+          <div class="row g-0 text-start">
+            <div class="col-md-4">
+              <img class="img-fluid sepia p-2 mt-2" style="border-radius:50%; overflow:hidden; " src="https://ux-ui-design-lab.github.io/hue-project/GabrielleKyraSumilang_Profile_square.jpg" alt="Gabrielle Sumilang profile photo">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body m-2">
+                <h5 class="card-title mt-2">Gabrielle Kyra Sumilang</h5>
+                <!-- p class="card-text">Gabrielle is a psychology graduate working to create meaningful experiences through detailed design and empathy-driven problem solving.</p -->
+                 <small class="text-muted">UX Writing, SEO, Accessibility </small>
+              </div>
+            </div>
+          </div>
+        </button>
+        </div>
+
+        <div class="modal fade" id="GabyModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" >
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="GabyModalLabel">Gabrielle Kyra Sumilang</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        Gabrielle is a psychology graduate working to create meaningful experiences through detailed design and empathy-driven problem solving.
+                      </div>
+                      <div class="modal-footer">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-linkedin"></a>
+                        <a href="#" class="fa fa-envelope"></a>
+                        <a href="#" class="fa fa-link"></a>
+
+                        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+        <div class="card mb-3 border-5 border-start border-end-0 border-top-0 border-bottom-0 border-warning" >
+        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#PriyanaModal">
+          <div class="row g-0 text-start">
+            <div class="col-md-4">
+              <img class="img-fluid sepia p-2 mt-2" style="border-radius:50%; overflow:hidden; " src="https://hue.humspace.ucla.edu/images/PriyanaPatel.jpg" alt="Priyana Patel profile photo">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body m-2">
+                <h5 class="card-title mt-2">Priyana Patel</h5>
+                <!-- p class="card-text">Priyana is a recent graduate who enjoys applying human-centered design to produce innovative solutions.</p -->
+                 <small class="text-muted">Contents Strategy, Prototyping</small>
+              </div>
+            </div>
+          </div>
+            </button>
+        </div>
+
+                <div class="modal fade" id="PriyanaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" >
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="PriyanaModalLabel">Priyana Patel</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        Priyana is a recent graduate who enjoys applying human-centered design to produce innovative solutions.
+                      </div>
+                      <div class="modal-footer">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-linkedin"></a>
+                        <a href="#" class="fa fa-envelope"></a>
+                        <a href="#" class="fa fa-link"></a>
+
+                        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+        <div class="card mb-3 border-5 border-start border-end-0 border-top-0 border-bottom-0 border-warning" >
+        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#GraceModal">
+          <div class="row g-0 text-start">
+            <div class="col-md-4">
+              <img class="img-fluid sepia p-2 mt-2" style="border-radius:50%; overflow:hidden; " src="https://hue.humspace.ucla.edu/images/grace.jpg" alt="Grace Zhu profile photo">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body m-2">
+                <h5 class="card-title mt-2">Grace Zhu</h5>
+                <!-- p class="card-text">Grace is a recent graduate exploring all the different technical and creative facets of UX/UI design.</p -->
+                 <small class="text-muted">Interface Design &amp; Development</small>
+              </div>
+            </div>
+            </div>
+            </button>
+        </div>
+
+        <div class="modal fade" id="GraceModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" >
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="GraceModalLabel">Grace Zhu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        Grace is a recent graduate exploring all the different technical and creative facets of UX/UI design.
+                      </div>
+                      <div class="modal-footer">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-linkedin"></a>
+                        <a href="#" class="fa fa-envelope"></a>
+                        <a href="#" class="fa fa-link"></a>
+
+                        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+        <div class="card mb-3 border-5 border-start border-end-0 border-top-0 border-bottom-0 border-warning" >
+        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#YoshinoModal">
+          <div class="row g-0 text-start">
+            <div class="col-md-4">
+              <img class="img-fluid sepia p-2 mt-2" style="border-radius:50%; overflow:hidden; " src="https://ux-ui-design-lab.github.io/hue-project/YoshinoG-2.jpg" alt="Yoshino Goto profile photo">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body m-1">
+                <h5 class="card-title mt-2">Yoshino Goto</h5>
+                <!-- p class="card-text">Yoshino is a Cognitive Science major/Asian American Studies minor who enjoys thinking about the intersection of technology and design. She is especially interested in building multicultural user experiences.</p -->
+                 <small class="text-muted">Product/Innovative Design, Prototyping</small>
+              </div>
+            </div>
+          </div>
+        </button>
+        </div>
+
+            <div class="modal fade" id="YoshinoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" >
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="YoshinoModalLabel">Yoshino Goto</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        Yoshino is a Cognitive Science major/Asian American Studies minor who enjoys thinking about the intersection of technology and design. She is especially interested in building multicultural user experiences.
+                      </div>
+                      <div class="modal-footer">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-linkedin"></a>
+                        <a href="#" class="fa fa-envelope"></a>
+                        <a href="#" class="fa fa-link"></a>
+
+                        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+        <div class="card mb-3 border-5 border-start border-end-0 border-top-0 border-bottom-0 border-warning" >
+        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#XeniaModal">
+          <div class="row g-0 text-start">
+            <div class="col-md-4">
+              <img class="img-fluid sepia p-2 mt-2" style="border-radius:50%; overflow:hidden; " src="https://ux-ui-design-lab.github.io/hue-project/XeniaC_square.jpg" alt="Xenia Zhou profile photo">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body m-2">
+                <h5 class="card-title mt-2">Xenia Zhou</h5>
+                <!-- p class="card-text">Xenia is a recent graduate who enjoys investigating user goals and exploring ways to ensure a delightful user experience.</p -->
+                 <small class="text-muted">Marketing/Consumer Research, Project management</small>
+              </div>
+            </div>
+          </div>
+        </button>
+        </div>
+
+            <div class="modal fade" id="XeniaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" >
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="XeniaModalLabel">Xenia Zhou</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        Xenia is a recent graduate who enjoys investigating user goals and exploring ways to ensure a delightful user experience.
+                      </div>
+                      <div class="modal-footer">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="http://linkedin.com/in/xeniajiaqizhou" class="fa fa-linkedin"></a>
+                        <a href="mailto:xchow1270@gmail.com" class="fa fa-envelope"></a>
+                        <a href="https://xeniajiaqizhou.wixsite.com/jiaqi" class="fa fa-link"></a>
+
+                        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+        <div class="card mb-3 border-5 border-start border-end-0 border-top-0 border-bottom-0 border-warning" >
+        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#YinyinModal">
+          <div class="row g-0 text-start">
+            <div class="col-md-4">
+              <img class="img-fluid sepia p-2 mt-2 w-100" style="border-radius:50%; overflow:hidden; " src="https://hue.humspace.ucla.edu/images/YinyinW.jpg" alt="Yinyin Wen profile photo">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body m-1">
+                <h5 class="card-title mt-2">Chu Yin Wen</h5>
+                <!-- p class="card-text">Chu Yin is a recent graduate of Psychology who currently works as a UX Designer at Fabric (social AR startup). She hopes to utilize the learnings from this startup to one day create beautiful, usable experiences that address social issues.</p -->
+                 <small class="text-muted">User Research Methods, Prototyping</small>
+              </div>
+            </div>
+          </div>
+        </button>
+        </div>
+
+            <div class="modal fade" id="YinyinModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" >
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="YinyinModalLabel">Chu Yin Wen</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        Xenia is a recent graduate who enjoys investigating user goals and exploring ways to ensure a delightful user experience.
+                      </div>
+                      <div class="modal-footer">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="https://www.linkedin.com/in/yinyinwen/" class="fa fa-linkedin"></a>
+                        <a href="mailto:wen.chu.yin@gmail.com" class="fa fa-envelope"></a>
+                        <a href="https://yinyinwen.wordpress.com/" class="fa fa-link"></a>
+
+                        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+        <div class="card mb-3 border-5 border-start border-end-0 border-top-0 border-bottom-0 border-warning" >
+        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#GarrettModal">
+          <div class="row g-0 text-start">
+            <div class="col-md-4">
+              <img class="img-fluid sepia p-2 mt-2 w-100" style="border-radius:50%; overflow:hidden; " src="https://hue.humspace.ucla.edu/images/GarrettR.jpg" alt="Garrett Romeo profile photo">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body m-1">
+                <h5 class="card-title mt-2">Garrett Romeo</h5>
+                <!-- p class="card-text">Garrett is an Information Science graduate student focused on embracing a user-centered philosophy and exploring the needs of users through qualitative research. Passionate about UX in general, he hopes to use and share his UX knowledge with others so that they can shape their product design with actionable research findings.</p -->
+                 <small class="text-muted">User Research, Project Management</small>
+              </div>
+            </div>
+          </div>
+        </button>
+        </div>
+
+            <div class="modal fade" id="GarrettModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" >
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="GarrettModalLabel">Garrett Romeo</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        Garrett is an Information Science graduate student focused on embracing a user-centered philosophy and exploring the needs of users through qualitative research.
+                      </div>
+                      <div class="modal-footer">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="https://www.linkedin.com/in/garrett-romero/" class="fa fa-linkedin"></a>
+                        <a href="mailto:elco7985@gmail.com" class="fa fa-envelope"></a>
+                        <a href="#" class="fa fa-link"></a>
+
+                        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+<div class="card mb-3 border-5 border-start border-end-0 border-top-0 border-bottom-0 border-warning" >
+    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#LillianModal">
+          <div class="row g-0 text-start">
+            <div class="col-md-4">
+              <img class="img-fluid sepia p-2 mt-2" style="border-radius:50%; overflow:hidden; " src="https://hue.humspace.ucla.edu/images/LillianNguyen.jpg" alt="Lillian Nguyen profile photo">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body m-1">
+                <h5 class="card-title mt-2">Lillian Nguyen</h5>
+                <!-- p class="card-text">I am a recent college graduate with a major in anthropology, and I enjoy understanding and learning more about people to design better experiences for them.</p -->
+                 <small class="text-muted">Design Ethnography, Prototyping</small>
+              </div>
+            </div>
+          </div>
+    </button>
+        </div>
+
+            <div class="modal fade" id="LillianModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" >
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="LillianModalLabel">Lillian Nguyen</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        Lillian is a recent college graduate with a major in anthropology, and I enjoy understanding and learning more about people to design better experiences for them.
+                      </div>
+                      <div class="modal-footer">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="https://www.linkedin.com/in/lilliannguyen97" class="fa fa-linkedin"></a>
+                        <a href="mailto:lilliannguyen@g.ucla.edu" class="fa fa-envelope"></a>
+                        <a href="https://lilliannguyen97.github.io/Portfolio/Me/" class="fa fa-link"></a>
+
+                        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+        <div class="card mb-3 border-5 border-start border-end-0 border-top-0 border-bottom-0 border-warning" >
+        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#NatalieModal">
+          <div class="row g-0 text-start">
+            <div class="col-md-4">
+              <img class="img-fluid sepia p-2 mt-2" style="border-radius:50%; overflow:hidden; " src="https://hue.humspace.ucla.edu/images/NatalieMazmanian.jpg" alt="Natalie <Mazmanian profile photo">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body m-2">
+                <h5 class="card-title mt-2">Natalie Mazmanian</h5>
+                <!-- p class="card-text">Natalie has crafted an array of UX experiences and strives to create delightful products that are functional, snazzy, and make the world a little better.</p -->
+                 <small class="text-muted">Interaction/interface design &amp; Development </small>
+              </div>
+            </div>
+          </div>
+        </button>
+        </div>
+
+            <div class="modal fade" id="NatalieModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" >
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="NatalieModalLabel">Natalie Mazmanian</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        Natalie has crafted an array of UX experiences and strives to create delightful products that are functional, snazzy, and make the world a little better.
+                      </div>
+                      <div class="modal-footer">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="https://www.linkedin.com/in/natalie-mazmanian/" class="fa fa-linkedin"></a>
+                        <a href="mailto:nmazmanian@g.ucla.edu" class="fa fa-envelope"></a>
+                        <a href="https://www.nataliemazmanian.com/" class="fa fa-link"></a>
+
+                        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+<div class="card mb-3 border-5 border-start border-end-0 border-top-0 border-bottom-0 border-warning" >
+    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#NikkiModal">
+          <div class="row g-0 text-start">
+            <div class="col-md-4">
+              <img class="img-fluid sepia p-2 mt-2" style="border-radius:50%; overflow:hidden; " src="https://hue.humspace.ucla.edu/images/NikkiRamos.jpg" alt="Nikki Ramos profile photo">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body m-1">
+                <h5 class="card-title mt-2">Nikki Ramos</h5>
+                <!-- p class="card-text">Nikki is a graduating Cognitive Science + Digital Humanities student who utilizes interdisciplinary thinking to design for good. She is passionate about technology's ability to nurture human learning and connectivity. </p -->
+                 <small class="text-muted">User Research, Interface/Interaction Design</small>
+              </div>
+            </div>
+        </div>
+    </button>
+        </div>
+
+            <div class="modal fade" id="NikkiModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" >
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="NikkiModalLabel">Nikki Ramos</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        Nikki is a graduating Cognitive Science + Digital Humanities student who utilizes interdisciplinary thinking to design for good. She is passionate about technology's ability to nurture human learning and connectivity.
+                      </div>
+                      <div class="modal-footer">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="https://www.linkedin.com/in/anjenica-nikki-ramos-1a2b28132/" class="fa fa-linkedin"></a>
+                        <a href="mailto:anjenicaramos@g.ucla.edu" class="fa fa-envelope"></a>
+                        <a href="https://nkkrms.squarespace.com/" class="fa fa-link"></a>
+
+                        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+        <div class="card mb-3 border-5 border-start border-end-0 border-top-0 border-bottom-0 border-warning" >
+        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#ZiyueModal">
+          <div class="row g-0 text-start">
+            <div class="col-md-4">
+              <img class="img-fluid sepia p-2 mt-2" style="border-radius:50%; overflow:hidden; " src="https://hue.humspace.ucla.edu/images/ZiyueQi.jpg" alt="Xenia Zhou profile photo">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body m-2">
+                <h5 class="card-title mt-2">Ziyue Qi</h5>
+                <!-- p class="card-text">Ziyue is a graduating Cognitive Science major and aspiring user researcher. She is interested in studies of embodied cognition and time-based media, specifically in the realm of digital audio technology. She has interested in forms of multi-modal interaction in technology and art. </p -->
+                 <small class="text-muted">Multimodal Interaction/Interface Design</small>
+              </div>
+            </div>
+          </div>
+        </button>
+        </div>
+
+            <div class="modal fade" id="ZiyueModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" >
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="ZiyueModalLabel">Ziyue Qi</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        Ziyue is a graduating Cognitive Science major and aspiring user researcher. She is interested in studies of embodied cognition and time-based media, specifically in the realm of digital audio technology. She has interested in forms of multi-modal interaction in technology and art.
+                      </div>
+                      <div class="modal-footer">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="https://www.linkedin.com/in/zq83/" class="fa fa-linkedin"></a>
+                        <a href="mailto:ZIYUEQI@GMAIL.COM" class="fa fa-envelope"></a>
+                        <a href="#" class="fa fa-link"></a>
+
+                        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+        <div class="card mb-3 border-5 border-start border-end-0 border-top-0 border-bottom-0 border-warning" >
+        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#AnitaModal">
+          <div class="row g-0 text-start">
+            <div class="col-md-4">
+              <img class="img-fluid sepia p-2 mt-2" style="border-radius:50%; overflow:hidden; " src="https://hue.humspace.ucla.edu/images/AnitaM.jpeg" alt="Anita profile photo">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body m-2">
+                <h5 class="card-title mt-2">Anita Morales</h5>
+                <!-- p class="card-text">Natalie has crafted an array of UX experiences and strives to create delightful products that are functional, snazzy, and make the world a little better.</p -->
+                 <small class="text-muted">User research, Project Management </small>
+              </div>
+            </div>
+            </div>
+        </button>
+        </div>
+
+
+        <div class="modal fade" id="AnitaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" >
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="AnitaModalLabel">Anita Morales</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        Anita is a graduate student.
+                      </div>
+                      <div class="modal-footer">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="https://www.linkedin.com/in/a-morales/" class="fa fa-linkedin"></a>
+                        <a href="mailto:moralesnita@gmail.com" class="fa fa-envelope"></a>
+                        <a href="#" class="fa fa-link"></a>
+
+                        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+            <div class="modal fade" id="AnnieModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" >
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="AnnieModalLabel">Annie Lieu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        Annie is a current Cognitive Science + Digital Humanities student passionate about human-centric iterative design thinking. She is passionate about technology's innovative qualities seeks to build and design products that spark joy.
+                      </div>
+                      <div class="modal-footer">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="https://www.linkedin.com/in/annielieu98/" class="fa fa-linkedin"></a>
+                        <a href="mailto:annie.n.lieu@gmail.com" class="fa fa-envelope"></a>
+                        <a href="#" class="fa fa-link"></a>
+
+                        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card mb-3 border-5 border-start border-end-0 border-top-0 border-bottom-0 border-warning" >
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#AnnieModal">
+                  <div class="row g-0 text-start">
+                    <div class="col-md-4">
+                      <img class="img-fluid sepia p-2 mt-2" style="border-radius:50%; overflow:hidden; " src="https://hue.humspace.ucla.edu/images/AnnieLieu.jpg" alt="Xenia Zhou profile photo">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body m-2">
+                        <h5 class="card-title mt-2">Annie Lieu</h5>
+                        <!-- p class="card-text">Annie is a current Cognitive Science + Digital Humanities student passionate about all design and iterative thinking, and human-centric design! She is passionate about technology's innovative qualities seeks to build and design products that spark joy. </p -->
+                         <small class="text-muted">User Research, Interaction/interface Design </small>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+                </div>
+
+<!-- derek -->
+
+            <div class="modal fade" id="DerekModal" tabindex="-1" aria-labelledby="DerekModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" >
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="DerekModalLabel">Derek Wang</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                          Derek is a graduating Statistics major & Digital Humanities minor who is passionate about creating accessible designs that foster meaningful relationships between product and consumer.
+                      </div>
+                      <div class="modal-footer">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="https://www.linkedin.com/in/derekwang99/" class="fa fa-linkedin"></a>
+                        <a href="mailto:derekwang250622@gmail.com" class="fa fa-envelope"></a>
+                        <a href="#" class="fa fa-link"></a>
+
+                        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card mb-3 border-5 border-start border-end-0 border-top-0 border-bottom-0 border-warning" >
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#DerekModal">
+                  <div class="row g-0 text-start">
+                    <div class="col-md-4">
+                      <img class="img-fluid sepia p-2 mt-2" style="border-radius:50%; overflow:hidden; " src="./images/DerekW.jpg" alt="Derek Wang profile photo">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body m-2">
+                        <h5 class="card-title mt-2">Derek Wang</h5>
+                        <!-- p class="card-text">Annie is a current Cognitive Science + Digital Humanities student passionate about all design and iterative thinking, and human-centric design! She is passionate about technology's innovative qualities seeks to build and design products that spark joy. </p -->
+                         <small class="text-muted">User Research, Interaction/interface Design </small>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+                </div>
+
+<!-- kelly -->
+
+
+            <div class="modal fade" id="KellyModal" tabindex="-1" aria-labelledby="KellyModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" >
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="KellyModalLabel">Kelly Zhong</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        Kelly is a Cognitive Science major specializing in Computing and minoring in Digital Humanities. Along with these fields, she also enjoys the fine arts, which has led to her interest in UX/UI design. Through her work, she hopes to create digital digital products that are both empowering and refreshing to users.
+                      </div>
+                      <div class="modal-footer">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="https://www.linkedin.com/in/kellyzhong09/" class="fa fa-linkedin"></a>
+                        <a href="mailto:kellyzhong@ucla.edu" class="fa fa-envelope"></a>
+                        <a href="#" class="fa fa-link"></a>
+
+                        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card mb-3 border-5 border-start border-end-0 border-top-0 border-bottom-0 border-warning" >
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#KellyModal">
+                  <div class="row g-0 text-start">
+                    <div class="col-md-4">
+                      <img class="img-fluid sepia p-2 mt-2" style="border-radius:50%; overflow:hidden; " src="./images/KellyZ.jpg" alt="Kelly Zhong profile photo">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body m-2">
+                        <h5 class="card-title mt-2">Kelly Zhong</h5>
+                        <!-- p class="card-text">Annie is a current Cognitive Science + Digital Humanities student passionate about all design and iterative thinking, and human-centric design! She is passionate about technology's innovative qualities seeks to build and design products that spark joy. </p -->
+                         <small class="text-muted">Product Design, Interaction/interface Design </small>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+                </div>
+
+<!-- Vera -->
+
+
+            <div class="modal fade" id="VeraModal" tabindex="-1" aria-labelledby="VeraModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" >
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="VeraModalLabel">Vera Li</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        Vera Li is a recent graduate and passionate in visual design and prototyping to design the user friendly websites and applications.
+                      </div>
+                      <div class="modal-footer">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="https://www.linkedin.com/in/mingzheli-vera/" class="fa fa-linkedin"></a>
+                        <a href="mailto:limingzhe19980421@gmail.com" class="fa fa-envelope"></a>
+                        <a href="#" class="fa fa-link"></a>
+
+                        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card mb-3 border-5 border-start border-end-0 border-top-0 border-bottom-0 border-warning" >
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#VeraModal">
+                  <div class="row g-0 text-start">
+                    <div class="col-md-4">
+                      <img class="img-fluid sepia p-2 mt-2" style="border-radius:50%; overflow:hidden; " src="./images/VeraLi.jpg" alt="Vera Li profile photo">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body m-2">
+                        <h5 class="card-title mt-2">Vera Li</h5>
+                        <!-- p class="card-text"> ... is a current Cognitive Science + Digital Humanities student passionate about all design and iterative thinking, and human-centric design! She is passionate about technology's innovative qualities seeks to build and design products that spark joy. </p -->
+                         <small class="text-muted"> Product Design, Interaction/interface Design </small>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+                </div>
+
+<!-- Shreya -->
+
+            <div class="modal fade" id="ShreyaModal" tabindex="-1" aria-labelledby="ShreyaModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" >
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="ShreyaModalLabel">Shreya Neogi</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        Shreya is a 2021 graduate from the Design Media Arts program. She hopes to use her multidisciplinary background of medicine, sculpture, and art to humanize the design world.
+                          </div>
+                      <div class="modal-footer">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="https://www.linkedin.com/in/shreya-neogi-781752132/" class="fa fa-linkedin"></a>
+                        <a href="mailto:sneogi@g.ucla.edu" class="fa fa-envelope"></a>
+                        <a href="#" class="fa fa-link"></a>
+
+                        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card mb-3 border-5 border-start border-end-0 border-top-0 border-bottom-0 border-warning" >
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#ShreyaModal">
+                  <div class="row g-0 text-start">
+                    <div class="col-md-4">
+                      <img class="img-fluid sepia p-2 mt-2" style="border-radius:50%; overflow:hidden; " src="./images/ShreyaN.jpg" alt="Shreya Neogi profile photo">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body m-2">
+                        <h5 class="card-title mt-2">Shreya Neogi</h5>
+                        <!-- p class="card-text"> ... is a current Cognitive Science + Digital Humanities student passionate about all design and iterative thinking, and human-centric design! She is passionate about technology's innovative qualities seeks to build and design products that spark joy. </p -->
+                         <small class="text-muted">Product design, Interaction/interface Design </small>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+                </div>
+
+
+    </div>
+
+    </div>
+  </div>
+
+  <div class="col-md-12 m-2">
+    <div class="collapse show multi-collapse" id="multiCollapseExample2">
+
+    <div class="card-deck">
+
+        <div class="card mb-3 border-5 border-start border-end-0 border-top-0 border-bottom-0 border-secondary" >
+          <div class="row g-0 ">
+            <div class="col-md-4">
+              <img class="img-fluid grayscale p-2" style="border-radius:50%; overflow:hidden; " src="https://hue.humspace.ucla.edu/images/sookie.jpg" alt="sookie profile photo">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body m-2">
+                <h5 class="card-title mt-2">Sookie C.</h5>
+                <!-- p class="card-text">Sookie is a human-centered design scientist with expertise in the psychology of design, experience design &amp; process modeling, and aesthetic judgement.<br><br> <a class="btn btn-secondary text-light" href="http://ancova.x10.mx/wp/about-me/" target="_blank"> Website</p -->
+                 <small class="text-muted">Psychology of Design, Visualization, Creative Coding </small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+    <div class="card mb-3 border-5 border-start border-end-0 border-top-0 border-bottom-0 border-secondary" >
+          <div class="row g-0 ">
+            <div class="col-md-4">
+              <img class="img-fluid grayscale p-2" style="border-radius:50%; overflow:hidden; " src="https://hue.humspace.ucla.edu/images/justin.jpg" alt="Justin profile photo">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body m-2">
+                <h5 class="card-title mt-2">Justin G.</h5>
+                <!-- p class="card-text">Justin is a Ruby on Rails developer with experience in management, leadership, and business development. He is a student of Philosophy with a passion for people, animals, and the environment.</p -->
+                 <small class="text-muted">Full Stack Web Development, Consumer Marketing</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mb-3 border-5 border-start border-end-0 border-top-0 border-bottom-0 border-secondary" >
+          <div class="row g-0 ">
+            <div class="col-md-4">
+              <img class="img-fluid grayscale p-2" style="border-radius:50%; overflow:hidden; " src="https://hue.humspace.ucla.edu/images/iris.jpg" alt="Iris profile photo">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body m-2">
+                <h5 class="card-title mt-2">Iris C.</h5>
+                <!-- p class="card-text">With 20 years of experience in designing with high technology for innovative solutions, Iris is a design expert with a holistic view on user experience. </p -->
+                 <small class="text-muted">Design Strategy, Innovative Product Design Process</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+    <div class="card mb-3 border-5 border-start border-end-0 border-top-0 border-bottom-0 border-secondary" >
+          <div class="row g-0 ">
+            <div class="col-md-4">
+              <img class="img-fluid grayscale p-2" style="border-radius:50%; overflow:hidden; " src="https://hue.humspace.ucla.edu/images/vera.jpg" alt="Vera profile photo">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body m-2">
+                <h5 class="card-title mt-2">Vera PL.</h5>
+                <!-- p class="card-text">Vera is a Graphic Designer &amp; Marketing Strategy Consultant who enjoys concept-driven work. She aims to guide her clients to an effective and sustainable solution to their needs. </p -->
+                 <small class="text-muted">Visual Design, Freelancing </small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <div class="card mb-3 border-5 border-start border-end-0 border-top-0 border-bottom-0 border-secondary" >
+          <div class="row g-0 ">
+            <div class="col-md-4">
+              <img class="img-fluid grayscale p-2" style="border-radius:50%; overflow:hidden; " src="https://hue.humspace.ucla.edu/images/MichaelP.jpg" alt="Michael profile photo">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body m-2">
+                <h5 class="card-title mt-2">Michael P.</h5>
+                <!-- p class="card-text">Michael is an academic librarian with 15 years experience in web accessibility design. He is passionate about collaboration to guide projects from the initial concept to auditing and testing. </p -->
+                 <small class="text-muted">Web Accessibility &amp; Development </small>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <div class="card mb-3 border-5 border-start border-end-0 border-top-0 border-bottom-0 border-secondary" >
+          <div class="row g-0 ">
+            <div class="col-md-4">
+              <img class="img-fluid grayscale p-2" style="border-radius:50%; overflow:hidden; " src="https://hue.humspace.ucla.edu/images//debbieR.jpg" alt="Debbie profile photo">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body m-2">
+                <h5 class="card-title mt-2">Debbie R.</h5>
+                <!-- p class="card-text">Debbie is a librarian with experience in digital curation, research, and information architecture. With a background in academic libraries, she is passionate about inclusive learning spaces, user experience, and universal access to information. </p -->
+                 <small class="text-muted">Information Architecture &amp;
+Digital Archieve Management </small>
+              </div>
+            </div>
+          </div>
+    </div>
+
+
+    <div class="card mb-3 border-5 border-start border-end-0 border-top-0 border-bottom-0 border-secondary" >
+          <div class="row g-0 ">
+            <div class="col-md-4">
+              <img class="img-fluid grayscale p-2" style="border-radius:50%; overflow:hidden; " src="./images/JennyC-temp.jpg" alt="Jenny profile photo">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body m-2">
+                <h5 class="card-title mt-2">Jenny C.</h5>
+                <!-- p class="card-text">Debbie is a librarian with experience in digital curation, research, and information architecture. With a background in academic libraries, she is passionate about inclusive learning spaces, user experience, and universal access to information. </p -->
+                 <small class="text-muted">
+                 Digital Product Design, UX strategy </small>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <div class="card mb-3 border-5 border-start border-end-0 border-top-0 border-bottom-0 border-secondary" >
+          <div class="row g-0 ">
+            <div class="col-md-4">
+              <img class="img-fluid grayscale p-2" style="border-radius:50%; overflow:hidden; " src="./images/advisor-temp.jpg" alt="Christine profile photo">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body m-2">
+                <h5 class="card-title mt-2">Christine K.</h5>
+                <!-- p class="card-text">Debbie is a librarian with experience in digital curation, research, and information architecture. With a background in academic libraries, she is passionate about inclusive learning spaces, user experience, and universal access to information. </p -->
+                 <small class="text-muted">
+                 Consumer Marketing, Quantitative Research </small>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <div class="card mb-3 border-5 border-start border-end-0 border-top-0 border-bottom-0 border-secondary" >
+          <div class="row g-0 ">
+            <div class="col-md-4">
+              <img class="img-fluid grayscale p-2" style="border-radius:50%; overflow:hidden; " src="./images/advisor-temp.jpg" alt="Alex profile photo">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body m-2">
+                <h5 class="card-title mt-2">Alex F.</h5>
+                <!-- p class="card-text">Debbie is a librarian with experience in digital curation, research, and information architecture. With a background in academic libraries, she is passionate about inclusive learning spaces, user experience, and universal access to information. </p -->
+                 <small class="text-muted">
+                 Data Analytic, Visualization </small>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    </div>
+    </div>
+  </div>
+
+
+    </div>
+
+
+    <!-- button type="button" class="btn btn-danger" id="button">View All Team Members</button -->
+
+
+  </div>
+</div>
+
+
+<br><br><br>
+
+<div class="container" id="projects">
+  <h2 class="title" >Projects</h2>
+  <p>We love to engage in a variety of partnerships that span multiple disciplines. We are constantly thinking about how to solve new challenges for our partners — here are some of the current projects the HUE team is working on:</p><br>
+  <div class="card-deck">
+      <div class="card h-50 border-0">
+        <img class="card-img-top" height="300px"  style="border: 1px solid lightgray;" src="https://hue.humspace.ucla.edu/images/hrsimple_logo.jpg" alt="hr simple logo">
+        <div class="card-body">
+          <h6 class="card-title" >hrsimple</h6>
+          <p class="card-text"> We are collaborating with hrsimple to improve their website's overall user experience and increase accessibility to online publications related to human-resource laws and policies. </p>
+        </div>
+      </div>
+
+        <div class="card h-50  border-0">
+
+          <img class="card-img-top" height="300px"  style="border: 1px solid lightgray;"  src="https://hue.humspace.ucla.edu/images/chef_farid_logo_800x450.jpg" alt="Card image cap">
+
+        <div class="card-body">
+          <h6 class="card-title" >Chef Farid</h6>
+          <p class="card-text"> We conducted the in-depth user/consumer marketing research to understand cooking service and launched an initial landing page for Chef Farid's cooking service. <br><br> </p>
+        </div>
+      </div>
+
+        <div class="card h-50  border-0">
+
+          <img class="card-img-top" height="300px"  style="border: 1px solid lightgray;"  src="https://hue.humspace.ucla.edu/images/fabric_social_logo_800x450.jpg" alt="Card image cap">
+
+        <div class="card-body">
+          <h6 class="card-title" >Fabric SocialAR</h6>
+          <p class="card-text"> We collaborate with Fabric Social AR for the UX discovery research about how we can strengthen Gen Z’s social fabric with peer-to-peer engagement and connection with social belonging.
+              <br><br> </p>
+        </div>
+      </div>
+
+    <div class="card h-50  border-0">
+
+          <img class="card-img-top" height="300px"  style="border: 1px solid lightgray;"  src="https://hue.humspace.ucla.edu/images/Lexan_learning_logo_800x450.jpg" alt="Card image cap">
+
+        <div class="card-body">
+          <h6 class="card-title" >Lexan Learning</h6>
+          <p class="card-text"> Lexan Learning is a tutoring company offering specialized remote tutoring services catered to student needs. They offer assessments at every grade level that assess student proficiency &amp; use research based methods to help foster academic excellence. <br><br> </p>
+        </div>
+      </div>
+
+
+      <div class="card h-50 border-0">
+        <img class="card-img-top" height="300px"  style="border: 1px solid lightgray;" src="./images/AIMR_logo_800x450.jpg" alt="">
+        <div class="card-body">
+          <h6 class="card-title" > AIMR Analytics </h6>
+          <p class="card-text"> We conducted user research for financial intelligence webapp to understand target user's characteristics and attitude toward the financial advisory intermediate service. </p>
+        </div>
+      </div>
+
+      <div class="card h-50 border-0">
+        <img class="card-img-top" height="300px"  style="border: 1px solid lightgray;" src="https://hue.humspace.ucla.edu/images/anthroposcene_logo.jpg" alt="">
+        <div class="card-body">
+          <h6 class="card-title" >Technoculture Online </h6>
+          <p class="card-text"> We are designing UC Irvine Professor Simon Penny's online course site for "200 Years of Technoculture: A Cultural History of the Anthropocene." </p>
+        </div>
+      </div>
+
+      <!-- https://images.unsplash.com/31/RpgvvtYAQeqAIs1knERU_vegetables.jpg?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1954&q=80 -->
+
+      <!-- div class="card">
+        <img class="card-img-top" height="30%" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title" id="title">Professor Simon Penny</h5>
+          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+        </div-->
+      </div>
+
+<br><br>
+
+  <a href="https://forms.gle/XgQb4RtJfQjuMBCBA" target="_blank" class="btn mybutton" >Project Proposal Form</a> <br>
+<small class="form-text text-muted">Interested in partnering with HUE? We're always looking to grow our collaborations — submit your project proposal today! </small>
+  </div>
+
+<br><br><br>
+
+<div class="bg-light" id="resources">
+<div class="container pt-5 pb-5"><br>
+  <h2 class="title">Resources</h2>
+  <p>Want to learn about specific topics or how to navigate your career path? Discover more about UX/UI with the resources below:</p><br>
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm m-2">
+      <h4 >Building Your UX Career</h4>
+    </div>
+    <div class="col-sm m-2">
+      <div class="card bg-light">
+
+        <a href="https://hue.humspace.ucla.edu/resources/hue-jobs-internships/"  target="_blank" class="card-body text-center btn bg-white">Internships &amp; Jobs</a>
+
+    </div>
+    </div>
+    <div class="col-sm m-2">
+     <div class="card bg-light">
+
+        <a href="https://hue.humspace.ucla.edu/resources/hue-networking/"  target="_blank" class="card-body text-center btn bg-white">Networking</a>
+
+    </div>
+    </div>
+  </div>
+
+<div class="row mt-5">
+    <div class="col-sm m-2">
+      <h4 >About the UX Design Process</h4>
+    </div>
+    <div class="col-sm m-2">
+      <div class="card bg-white">
+
+         <a href="https://hue.humspace.ucla.edu/resources/hue-ideation/"  target="_blank" class="card-body text-center btn bg-white">Ideation</a>
+
+    </div>
+    </div>
+    <div class="col-sm m-2">
+     <div class="card bg-white">
+
+        <a href="https://hue.humspace.ucla.edu/resources/hue-visualization-and-prototyping/"  target="_blank" class="card-body text-center btn bg-white">Prototyping</a>
+
+    </div>
+    </div>
+</div>
+
+<div class="row ">
+    <div class="col-sm m-2">
+
+    </div>
+    <div class="col-sm m-2">
+      <div class="card bg-white">
+
+        <a href="https://hue.humspace.ucla.edu/resources/hue-user-research/"  target="_blank" class="card-body text-center btn bg-white"> Research</a>
+
+    </div>
+    </div>
+    <div class="col-sm m-2">
+     <div class="card bg-white">
+
+        <a href="https://hue.humspace.ucla.edu/resources/hue-ux-portfolio/"  target="_blank" class="card-body text-center btn bg-white">UX Portfolio</a>
+
+    </div>
+    </div>
+</div>
+    </div>
+
+    </div>
+    </div>
+
+    <br><br><br>
+
+<div class="container bg-white" >
+  <h2 class="title" id="member"> Join the Team</h2>
+  <p> We're always eager for new members to join our network! Tell us a bit about yourself using the form below, and we'll contact you with how to get started. </p> <br>
+
+    <!-- iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe_BjfvuG9CsEPiDcDFi1hocGbUwpC7BraVe3I3bPfg__YW5w/viewform?embedded=true" width="640" height="1192" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe -->
+
+
+    <a class="btn mybutton" href="https://forms.gle/nHxkJBtoqEWCYeFA7" target="_blank" class="btn btn-primary"> I'm interested in joining HUE! </a>
+
+<br><br><br>
+
+</div>
+
+<div id="contact">
+    <div class="container pt-5 pb-5">
+    <h2 class="text-white">Connect With Us</h2>
+    <!-- a id="mail" class="text-white" href="mailto:hello.hue.project@gmail.com&subject=Hello&body=what-you-want-to-say-to-HUE" target="_blank"><span class="material-icons align-bottom">
+email
+</span> &nbsp; </a -->
+
+    <hr>
+        <a id="story" href="../project/hue-story.html" target="_blank"><span class="material-icons align-bottom">
+mode_comment
+            </span> <span class="text-dark"> &nbsp; Read more about us: HUE story </span></a>
+    </div>
+
+    <!-- hr>
+    <div class="container">
+    <small class="text-light text-center"> copyright(c) HUE project 2020 </small>
+    </div -->
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+</body>
+</html>
